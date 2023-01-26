@@ -31,7 +31,7 @@ function moveZeros(arr) {
         if (arr[i] === 0) {
             count++;
             arr.slice(prev, i).map(item => out.push(item))
-            prev = i+1;
+            prev = i + 1;
         }
     }
     arr.slice(prev, arr.length).map(item => out.push(item))
@@ -41,7 +41,7 @@ function moveZeros(arr) {
         }
     }
     console.log(out);
-    return(out);
+    return (out);
 
 }
 // moveZeros([false, 1, 0, 1, 2, 0, 1, 3, "a"])
@@ -60,4 +60,8 @@ function moveZeros(arr) {
 // return arr.sort((a, b) => b === 0 ? -1 : 0);
 // ===========================================
 // let moveZeros = (arr) => arr.filter(i => i !== 0).concat(arr.filter(i => i === 0));
-// ===========================================
+// ====================================================================================================================================
+// Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
+function pigIt(str) {
+
+}
