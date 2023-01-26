@@ -63,5 +63,30 @@ function moveZeros(arr) {
 // ====================================================================================================================================
 // Move the first letter of each word to the end of it, then add "ay" to the end of the word. Leave punctuation marks untouched.
 function pigIt(str) {
-
+    console.log(str);
+    let temp = '';
+    let tt = str.split(' ');
+    tt.map((item, i) => {
+        item != "!" && item != "?" ?
+            i == tt.length - 1 ? temp += item.slice(1, item.length) + item[0] + 'ay' :
+                temp += item.slice(1, item.length) + item[0] + 'ay' + ' '
+            :
+            item
+    })
+    console.log(temp);
 }
+// pigIt('Pig latin is cool');
+// return str.replace(/(\w)(\w*)(\s|$)/g, "\$2\$1ay\$3")
+// =====================================
+// return str.replace(/\w+/g, (w) => {
+//     return w.slice(1) + w[0] + 'ay';
+// });
+// =====================================
+// var arrayWord = str.split(' ');
+// return arrayWord.map(function (word) {
+//     var firstLetter = word.charAt(0);
+//     return word.slice(1) + firstLetter + 'ay';
+// }).join(' ');
+// =====================================
+// return str.split(" ").map((item) => `${item.substr(1)}${item[0]}ay`).join(" ")
+// =====================================
